@@ -1,0 +1,163 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjaij8lomlydl"]
+
+[ext_resource type="Script" path="res://calculadora.gd" id="1_xpxlu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5k5a4"]
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[node name="calculadora" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xpxlu")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="display" type="ColorRect" parent="background"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 360.0
+offset_bottom = 93.0
+
+[node name="Label" type="Label" parent="background/display"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -20.0
+offset_right = 156.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_5k5a4")
+horizontal_alignment = 2
+
+[node name="grid" type="GridContainer" parent="background"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 130.0
+offset_right = -30.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="7" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.23
+text = "7"
+
+[node name="8" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "8"
+
+[node name="9" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "9"
+
+[node name="mult" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "X"
+
+[node name="4" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.23
+text = "4"
+
+[node name="5" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "5"
+
+[node name="6" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "6"
+
+[node name="sub" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "-"
+
+[node name="1" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.23
+text = "1"
+
+[node name="2" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "2"
+
+[node name="3" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "3"
+
+[node name="soma" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "+"
+
+[node name="reset" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.23
+text = "C"
+
+[node name="0" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "0"
+
+[node name="div" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "/"
+
+[node name="=" type="Button" parent="background/grid" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.23
+text = "="
